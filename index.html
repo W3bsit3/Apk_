@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Data</title>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="data.css">
+    <link rel="stylesheet" href="dashboard.html">
+    <link rel="icon" href="image/Logo1.webp" type="image">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <button onclick="navigateToDashboard()">Dashboard</button>
+        <button onclick="navigateToData()">Rekap Data</button>
+        <button class="nav-button logout-button" onclick="logout()">Logout</button>
+    </div>
+    <!-- Content -->
+    <div class="content">
+        <h1>Rekap Data</h1>
+        <form id="dataForm" class="form-container">
+            <input type="text" id="itemName" placeholder="Nama Barang" required>
+            <input type="text" id="itemUse" placeholder="Kegunaan" required>
+             <input type="text" id="itemReason" placeholder="Alasan" required>
+            <input type="number" id="itemCost" placeholder="Biaya" required>
+            <input type="file" id="itemImage" accept="image/*" required>
+            <button type="submit">Tambahkan</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Barang</th>
+                    <th>Gambar</th>
+                    <th>Kegunaan</th>
+                    <th>Alasan</th>
+                    <th>Biaya</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+    </div>
+
+    <script src="data.js"></script>
+</body>
+</html>
